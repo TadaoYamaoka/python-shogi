@@ -62,8 +62,8 @@ SERVER_MESSAGES = [
 
 class Parser:
     @staticmethod
-    def parse_file(path):
-        with open(path) as f:
+    def parse_file(path, encoding=None):
+        with open(path, encoding=encoding) as f:
             return Parser.parse_str(f.read())
 
     @staticmethod
